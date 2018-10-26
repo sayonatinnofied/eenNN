@@ -1,25 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { FunComponent } from './fun.component';
 import { SharedModule } from '../shared/shared.module';
-
-import { HomePage } from './home.page';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
     IonicModule,
+    FormsModule,
     SharedModule,
     RouterModule.forChild([
       {
-        path: '',
-        component: HomePage
+        path:'',
+        component:FunComponent
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [FunComponent]
 })
-export class HomePageModule { }
+export class FunModule { }
