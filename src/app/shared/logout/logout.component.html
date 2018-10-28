@@ -4,14 +4,14 @@
       <ion-label>Other actions ...
       </ion-label>
     </ion-list-header>
-    <ion-item (click)="navigateTo('/profile')" lines="full" *ngIf="isNotProfile">
+    <ion-item href="" (click)="navigateTo('/profile')" lines="full" *ngIf="isNotProfile">
       <ion-icon name="contact" slot="start"></ion-icon>
       <ion-label>
         Profile
       </ion-label>
     </ion-item>
-    <ion-item (click)="navigateTo('/login')">
-      <ion-icon name="undo" slot="start"></ion-icon>
+    <ion-item href="" (click)="navigateTo('/login')">
+      <ion-icon name="power" slot="start"></ion-icon>
       <ion-label>
         Logout
       </ion-label>

@@ -1,3 +1,36 @@
-<p>
-  login works!
-</p>
+<ion-content>
+  <ion-grid>
+    <ion-row align-items-center justify-content-center>
+      <ion-col align-self-center>
+        <ion-img [src]="nn.logo" class="nn-logo-login"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title class="center" >Get started!</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item >
+        <ion-label position="floating">Corporate Key</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label position="floating">Password</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    </ion-card-content>
+
+    <ion-grid>
+      <ion-row align-items-center justify-content-center>
+        <ion-col align-self-center class="center">
+          <ion-button shape="round" fill="outline" color="dark">
+            <ion-icon slot="start" name="unlock"></ion-icon>
+            Login
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
