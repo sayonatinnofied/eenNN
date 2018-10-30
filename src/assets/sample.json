@@ -1,0 +1,41 @@
+{
+    "workList": [{
+        "id": "123",
+        "title": "###",
+        "imgSrc": "http://c.v/x.jpeg",
+        "status": "this can be LIVE or UPCOMING based on the timestamp of the event",
+        "totalMembers": "12",
+        "description":"some description",
+        "type": "whether INCIDENT/CHANGE/OPERATIONAL TASK",
+        "priority": "High/Medium/Low",
+        "affectedCIs": ["CIO", "Pensions"],
+        "startTimestamp": "2012-04-23T18:25:43.511Z",
+        "endTimestamp": "2012-04-23T18:25:43.511Z",
+        "slackUrl": "http://c.v/x.jpeg"
+    }],
+    "funList": [{
+        "id": "123",
+        "title": "###",
+        "imgSrc": "http://c.v/x.jpeg",
+        "status": "this can be LIVE or UPCOMING based on the timestamp of the event",
+        "totalMembers": "12",
+        "description":"some description",
+        "location": "some address",
+        "startTimestamp": "2012-04-23T18:25:43.511Z",
+        "endTimestamp": "2012-04-23T18:25:43.511Z",
+        "slackUrl": "http://c.v/x.jpeg"
+    }],
+    "healthList": [{
+        "id": "123",
+        "title": "###",
+        "imgSrc": "http://c.v/x.jpeg",
+        "status": "this can be LIVE or UPCOMING based on the timestamp of the event",
+        "totalMembers": "12",
+        "description":"some description",
+        "location": "some address",
+        "healthPoints":"200",
+        "startTimestamp": "2012-04-23T18:25:43.511Z",
+        "endTimestamp": "2012-04-23T18:25:43.511Z",
+        "slackUrl": "http://c.v/x.jpeg"
+    }]
+}

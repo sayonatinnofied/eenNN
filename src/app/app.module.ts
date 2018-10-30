@@ -9,13 +9,13 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-// import { HttpModule } from '@angular/http'
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AuthGuard } from './shared/_gaurds/auth.guard';
 import { Auth2Interceptor } from './shared/_helpers/auth2.interceptor';
 import { ErrorInterceptor } from './shared/_helpers/error.interceptor';
 import { AuthenticationService } from './shared/_services/authentication.service';
+import { EENNService } from './shared/_services/eenn.service';
 
 import { AppGlobals } from './app.globals';
 
@@ -23,7 +23,6 @@ import { AppGlobals } from './app.globals';
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
-    // HttpModule,
     HttpClientModule,
     BrowserModule,
     IonicModule.forRoot(),
@@ -36,6 +35,7 @@ import { AppGlobals } from './app.globals';
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AuthGuard,
     AuthenticationService,
+    EENNService,
     { provide: HTTP_INTERCEPTORS, useClass: Auth2Interceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
   ],
