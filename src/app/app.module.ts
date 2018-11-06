@@ -16,6 +16,7 @@ import { Auth2Interceptor } from './shared/_helpers/auth2.interceptor';
 import { ErrorInterceptor } from './shared/_helpers/error.interceptor';
 import { AuthenticationService } from './shared/_services/authentication.service';
 import { EENNService } from './shared/_services/eenn.service';
+import { ActionSheetService } from './shared/_services/actionsheet.service';
 
 import { AppGlobals } from './app.globals';
 
@@ -36,6 +37,7 @@ import { AppGlobals } from './app.globals';
     AuthGuard,
     AuthenticationService,
     EENNService,
+    ActionSheetService,
     { provide: HTTP_INTERCEPTORS, useClass: Auth2Interceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
   ],

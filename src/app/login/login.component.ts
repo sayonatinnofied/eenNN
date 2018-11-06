@@ -42,7 +42,8 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.navigateTo('/home');
+    localStorage.setItem('currentUser', JSON.stringify(this.user));
+    this.navigateTo(this.returnUrl);
   }
 
 

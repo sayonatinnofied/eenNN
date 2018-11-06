@@ -3,6 +3,7 @@ import { first } from 'rxjs/operators';
 import { EENNService } from '../shared/_services/eenn.service';
 
 import { Full } from '../shared/_model/full.model';
+import { ActionSheetService } from '../shared/_services/actionsheet.service';
 
 @Component({
   selector: 'app-home',
@@ -14,8 +15,8 @@ export class HomePage {
   private title: String = 'Home';
   private full: Full;
 
-  constructor(private eennService: EENNService) {
-
+  constructor(private eennService: EENNService, private actionSheetService: ActionSheetService) {
+    
   }
 
   ngOnInit() {
@@ -28,4 +29,7 @@ export class HomePage {
     });
   }
 
+  presentActionSheet() {
+    this.actionSheetService.presentActionSheet();
+  }
 }
