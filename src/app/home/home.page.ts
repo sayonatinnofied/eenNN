@@ -21,11 +21,15 @@ export class HomePage {
 
   ngOnInit() {
 
+    this.loadAllValues();
+
   }
 
   private loadAllValues() {
     this.eennService.getAll().pipe(first()).subscribe(full => {
       this.full = full;
+    }, error => {
+      console.log(error);
     });
   }
 

@@ -42,6 +42,7 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    this.user.token = 'b511629a-84f4-3cb8-b234-0d5cf278bb27';
     localStorage.setItem('currentUser', JSON.stringify(this.user));
     this.navigateTo(this.returnUrl);
   }

@@ -47,7 +47,7 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: './profile/profile.module#ProfileModule',
     canActivate: [AuthGuard]
-  },{
+  }, {
     path: '**',
     redirectTo: 'home',
     pathMatch: 'full',
