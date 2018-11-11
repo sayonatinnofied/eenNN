@@ -1,15 +1,122 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-        <ion-back-button defaultHref="home" color="primary"></ion-back-button>
-      </ion-buttons>
-      <ion-title>
-        Search
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content padding>
-    <ion-searchbar debounce="500"></ion-searchbar>
-  </ion-content>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button defaultHref="home" color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Search
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar class="search-segment-toolbar">
+    <ion-segment (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="work" checked>
+        Work
+      </ion-segment-button>
+      <ion-segment-button value="health">
+        Health
+      </ion-segment-button>
+      <ion-segment-button value="fun">
+        Fun
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar debounce="500" (ionChange)="search()" [(ngModel)]="searchStr"></ion-searchbar>
+
+  <ion-card *ngIf="searchType=='work'">
+    <ion-card-header (click)="presentActionSheet()">
+      <ion-card-title><a># EMS P2P Down!</a></ion-card-title>
+    </ion-card-header>
+
+    <ion-item lines="full">
+      <ion-badge slot="end" color="success">LIVE</ion-badge>
+      <ion-chip color="light">
+        <ion-icon name="eye" color="danger"></ion-icon>
+        <ion-label>30 members watching</ion-label>
+      </ion-chip>
+    </ion-item>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+
+    <ion-item>
+      <ion-label>Type: Incident - Priority High</ion-label>
+      <ion-badge color="danger" slot="end">PR 1</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Affected CI's: </ion-label>
+      <ion-chip color="light">
+        <ion-label>Pensions</ion-label>
+      </ion-chip>
+      <ion-chip color="light">
+        <ion-label>Bank</ion-label>
+      </ion-chip>
+      <ion-chip color="light">
+        <ion-label>Hypotheken</ion-label>
+      </ion-chip>
+      <ion-chip color="light">
+        <ion-label>Services</ion-label>
+      </ion-chip>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Expected Resolution by 12:30</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card *ngIf="searchType=='health'">
+    <ion-card-header (click)="presentActionSheet()">
+      <ion-card-title><a># 3 mile walk challenge!</a></ion-card-title>
+    </ion-card-header>
+
+    <ion-item lines="full">
+      <ion-badge slot="end" color="success">LIVE</ion-badge>
+      <ion-chip color="light">
+        <ion-icon name="heart" color="danger"></ion-icon>
+        <ion-label>23 members following</ion-label>
+      </ion-chip>
+    </ion-item>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+
+    <ion-item>
+      <ion-label>Health Points: 5000</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Challenge ends on 09:00</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card *ngIf="searchType=='fun'">
+    <ion-card-header (click)="presentActionSheet()">
+      <ion-card-title><a># NN Hackathon!</a></ion-card-title>
+    </ion-card-header>
+
+    <ion-item lines="full">
+      <ion-badge slot="end" color="success">LIVE</ion-badge>
+      <ion-chip color="light">
+        <ion-icon name="heart" color="danger"></ion-icon>
+        <ion-label>200 members following</ion-label>
+      </ion-chip>
+    </ion-item>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+
+    <ion-item>
+      <ion-label>Location: The Hague</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Event ends on 16th November 15:00</ion-label>
+    </ion-item>
+  </ion-card>
+</ion-content>

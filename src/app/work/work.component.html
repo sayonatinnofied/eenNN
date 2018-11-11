@@ -1,7 +1,45 @@
 <app-header [title]="title"></app-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the
-    <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+<ion-content>
+  <ion-card>
+    <ion-card-header (click)="presentActionSheet()">
+      <ion-card-title><a># EMS P2P Down!</a></ion-card-title>
+    </ion-card-header>
+
+    <ion-item lines="full">
+      <ion-badge slot="end" color="success">LIVE</ion-badge>
+      <ion-chip color="light">
+        <ion-icon name="eye" color="danger"></ion-icon>
+        <ion-label>30 members watching</ion-label>
+      </ion-chip>
+    </ion-item>
+
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+
+    <ion-item>
+      <ion-label>Type: Incident - Priority High</ion-label>
+      <ion-badge color="danger" slot="end">PR 1</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Affected CI's: </ion-label>
+      <ion-chip color="light">
+        <ion-label>Pensions</ion-label>
+      </ion-chip>
+      <ion-chip color="light">
+        <ion-label>Bank</ion-label>
+      </ion-chip>
+      <ion-chip color="light">
+        <ion-label>Hypotheken</ion-label>
+      </ion-chip>
+      <ion-chip color="light">
+        <ion-label>Services</ion-label>
+      </ion-chip>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Expected Resolution by 12:30</ion-label>
+    </ion-item>
+  </ion-card>
 </ion-content>

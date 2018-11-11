@@ -1,8 +1,73 @@
 <app-header [title]="title"></app-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the
-    <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
-    <ion-button expand="block" id="basic" (click)="presentActionSheet()">Basic</ion-button>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-icon name="briefcase" slot="start"></ion-icon>
+        <ion-card-title>Trending at work ...</ion-card-title>
+        <ion-button fill="outline" slot="end" (click)="navigateTo('/work')">More</ion-button>
+      </ion-item>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item href="" (click)="presentActionSheet()">
+        <ion-label># EMS P2P down!</ion-label>
+        <ion-badge slot="end" color="danger">PR1</ion-badge>
+      </ion-item>
+      <ion-item href="" (click)="presentActionSheet()">
+        <ion-label># MFT PROD LCM!</ion-label>
+        <ion-badge slot="end" color="warning">CHG</ion-badge>
+      </ion-item>
+      <ion-item href="" lines="none" (click)="presentActionSheet()">
+        <ion-label># BPM Housekeeping!</ion-label>
+        <ion-badge slot="end">OPS</ion-badge>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-icon name="medical" slot="start"></ion-icon>
+        <ion-card-title>Health@NN ...</ion-card-title>
+        <ion-button fill="outline" slot="end" (click)="navigateTo('/health')">More</ion-button>
+      </ion-item>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item href="" (click)="presentActionSheet()">
+        <ion-label># 3 mile walk challenge!</ion-label>
+      </ion-item>
+      <ion-item href="" (click)="presentActionSheet()">
+        <ion-label># Biking challenge!</ion-label>
+      </ion-item>
+      <ion-item href="" lines="none" (click)="presentActionSheet()">
+        <ion-label># NN Marathon!</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-icon name="happy" slot="start"></ion-icon>
+        <ion-card-title>Fun@NN ...</ion-card-title>
+        <ion-button fill="outline" slot="end" (click)="navigateTo('/fun')">More</ion-button>
+      </ion-item>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item href="" (click)="presentActionSheet()">
+        <ion-label># Bowling passes at DDDD!</ion-label>
+      </ion-item>
+      <ion-item href="" (click)="presentActionSheet()">
+        <ion-label># Summer Party!</ion-label>
+      </ion-item>
+      <ion-item href="" lines="none" (click)="presentActionSheet()">
+        <ion-label># CS&H Drinks!</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <!-- <ion-button expand="block" id="basic" (click)="presentActionSheet()">Basic</ion-button> -->
 </ion-content>

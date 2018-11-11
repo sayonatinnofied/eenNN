@@ -1,0 +1,11 @@
+.search-segment-toolbar {
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-start: 0px;
+    --padding-end: 0px;
+    --min-height: 0;
+}
+
+.sc-ion-segment-md-s > ion-segment-button {
+    --border-width: 0 0 3px 0;
+}
